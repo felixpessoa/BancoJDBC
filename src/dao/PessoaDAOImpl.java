@@ -21,8 +21,8 @@ public class PessoaDAOImpl {
 			ps.setInt(2, pessoa.getIdade());
 			ps.setString(3, pessoa.getSexo());
 			ps.setString(4, pessoa.getCpf());
-			ps.setEndereco(5, pessoa.getEndereco());
-			ps.setConta(6, pessoa.getConta());
+//			ps.setEndereco(5, pessoa.getEndereco());
+//			ps.setConta(6, pessoa.getConta());
 			ps.execute();
 			System.out.println("Pessoa inserida com sucesso.");
 		} catch (SQLException e) {
@@ -37,7 +37,7 @@ public class PessoaDAOImpl {
 		String sql = "DETELE FROM PESSOA WHERE CPF = ?";
 		try {
 			PreparedStatement ps = conn.prepareStatement(sql);
-			ps.setString(1, cpf);
+			//ps.setString(1, cpf);
 			ps.execute();
 			System.out.println("Conta Deletada com sucesso");
 
@@ -56,8 +56,8 @@ public class PessoaDAOImpl {
 			ps.setInt(2, pessoa.getIdade());
 			ps.setString(3, pessoa.getSexo());
 			ps.setString(4, pessoa.getCpf());
-			ps.setEndereco(5, pessoa.getEndereco());
-			ps.setConta(6, pessoa.getConta());
+			//ps.setEndereco(5, pessoa.getEndereco());
+			//ps.setConta(6, pessoa.getConta());
 			ps.execute();
 			System.out.println("Pessoa Atualizada com  sucesso");
 		} catch (Exception e) {
