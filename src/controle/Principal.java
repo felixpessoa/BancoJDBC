@@ -1,8 +1,7 @@
 package controle;
 
-import dao.ContaDAOImpl;
-import dao.PessoaDAOImpl;
-import model.Pessoa;
+import dao.EnderecoDAOImpl;
+import model.Endereco;
 
 public class Principal {
 
@@ -16,16 +15,21 @@ public class Principal {
 //		conta.setSaldo(0);
 //		conta.setLimite(3000d);
 
-		Pessoa p1 = new Pessoa();
-		p1.setNome("felix");
-		p1.setIdade(23);
-		p1.setSexo("M");
-		p1.setCpf("70626303494");
-		p1.setEndereco(null);
-		p1.setConta(null);
+//		Pessoa p1 = new Pessoa();
+//		p1.setNome("Fernando");
+//		p1.setIdade(23);
+//		p1.setSexo("M");
+//		p1.setCpf("12345678919");
+//		p1.getEndereco().setId(42);
+//		p1.getConta().setNumero(127);
 		
-		PessoaDAOImpl pessoaDAO= new PessoaDAOImpl();
-		pessoaDAO.salvar(p1);
+		
+//		PessoaDAOImpl pessoaDAO= new PessoaDAOImpl();
+//		pessoaDAO.salvar(p1);
+		
+		EnderecoDAOImpl endereco = new EnderecoDAOImpl();
+		Endereco endereco1 = EnderecoDAOImpl.pesquisar(43);
+		System.out.println(endereco1.toString());
 	
 //		ContaDAOImpl contaDAO = new ContaDAOImpl();
 //		contaDAO.alterar(123);
